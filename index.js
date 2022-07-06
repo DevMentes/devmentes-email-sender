@@ -22,14 +22,14 @@ app.post('/contact', async (request, response) => {
       port: 465,
       secure: true,
       auth: {
-        user: 'contacto@devmentes.cl',
-        pass: '18661242_c'
+        user: 'contacto@email.com',
+        pass: '0000000'
       }
     })
 
     const forUsMailOption = {
-      from: 'contacto@devmentes.cl',
-      to: 'contacto@devmentes.cl',
+      from: 'contacto@email.com',
+      to: 'contacto@email.com',
       subject: 'Nuevo mensaje de contacto',
       text: contact(name, phone, email, message)
     }
@@ -38,7 +38,7 @@ app.post('/contact', async (request, response) => {
     })
 
     const confirmationOptions = {
-      from: 'contacto@devmentes.cl',
+      from: 'contacto@email.com',
       to: email,
       subject: 'Hemos recibido tu mensaje',
       text: confirmation(name)
